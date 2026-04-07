@@ -3,6 +3,7 @@ import { profile } from '../data/profile'
 
 const navItems = [
   { to: '/', label: 'Home' },
+  { to: '/blog', label: 'Blog' },
   { to: '/publications', label: 'Publications' },
 ]
 
@@ -16,8 +17,8 @@ function SiteLayout() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-50 text-slate-800">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[#1f5ca9]/30 blur-3xl" />
-        <div className="absolute right-0 top-20 h-80 w-80 rounded-full bg-[#00afef]/35 blur-3xl" />
+        <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-brand-primary/30 blur-3xl" />
+        <div className="absolute right-0 top-20 h-80 w-80 rounded-full bg-brand-accent/35 blur-3xl" />
       </div>
 
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 pt-8 md:px-10 lg:px-16">
@@ -30,7 +31,7 @@ function SiteLayout() {
             />
           </NavLink>
           <div>
-            <p className="font-display text-lg font-semibold text-[#1f5ca9]">{profile.name}</p>
+            <p className="font-display text-lg font-semibold text-brand-primary">{profile.name}</p>
             <p className="text-sm text-slate-600">{profile.role}</p>
           </div>
         </div>
