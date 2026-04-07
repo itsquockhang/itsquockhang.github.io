@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" rx="24" fill="#EEF5FF"/>
+  <text x="54" y="82" fill="#1f5ca9" font-family="Arial, sans-serif" font-size="34" font-weight="700">Generic Research Pipeline</text>
+
+  <rect x="56" y="142" width="214" height="88" rx="14" fill="#1f5ca9" opacity="0.88"/>
+  <rect x="334" y="142" width="214" height="88" rx="14" fill="#00afef" opacity="0.88"/>
+  <rect x="612" y="142" width="214" height="88" rx="14" fill="#1f5ca9" opacity="0.88"/>
+  <rect x="890" y="142" width="252" height="88" rx="14" fill="#00afef" opacity="0.88"/>
+
+  <g stroke="#1f5ca9" stroke-width="8" stroke-linecap="round">
+    <line x1="274" y1="186" x2="324" y2="186"/>
+    <line x1="552" y1="186" x2="602" y2="186"/>
+    <line x1="830" y1="186" x2="880" y2="186"/>
+  </g>
+
+  <text x="100" y="197" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="700">Data</text>
+  <text x="370" y="197" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="700">Feature/Model</text>
+  <text x="662" y="197" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="700">Evaluation</text>
+  <text x="940" y="197" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="700">Results</text>
+
+  <rect x="56" y="278" width="1088" height="270" rx="16" fill="white"/>
+  <text x="86" y="332" fill="#334155" font-family="Arial, sans-serif" font-size="30" font-weight="700">Placeholder Image</text>
+  <text x="86" y="380" fill="#475569" font-family="Arial, sans-serif" font-size="24">You can replace this with a real pipeline figure for each paper.</text>
+  <text x="86" y="420" fill="#475569" font-family="Arial, sans-serif" font-size="24">Current setup uses one shared generic image for all publications.</text>
+</svg>

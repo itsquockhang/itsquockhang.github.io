@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" rx="24" fill="#EEF8FC"/>
+  <text x="56" y="86" fill="#1f5ca9" font-family="Arial, sans-serif" font-size="34" font-weight="700">Paper Pipeline 02</text>
+  <rect x="56" y="140" width="290" height="90" rx="14" fill="#00afef" opacity="0.88"/>
+  <rect x="430" y="140" width="290" height="90" rx="14" fill="#1f5ca9" opacity="0.88"/>
+  <rect x="804" y="140" width="340" height="90" rx="14" fill="#00afef" opacity="0.88"/>
+  <g stroke="#1f5ca9" stroke-width="8" stroke-linecap="round">
+    <line x1="350" y1="184" x2="420" y2="184"/>
+    <line x1="724" y1="184" x2="794" y2="184"/>
+  </g>
+  <text x="88" y="196" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="700">Collection</text>
+  <text x="470" y="196" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="700">Experiment</text>
+  <text x="842" y="196" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="700">Findings</text>
+  <text x="56" y="560" fill="#35639F" font-family="Arial, sans-serif" font-size="24">Replace this placeholder with your real paper pipeline image anytime.</text>
+</svg>

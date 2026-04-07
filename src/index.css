@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'K2D', sans-serif;
+  --font-display: 'K2D', sans-serif;
+  --color-brand-primary: #1f5ca9;
+  --color-brand-accent: #00afef;
+}
+
+@layer base {
+  :root {
+    color: #0f172a;
+    background-color: #f8fafc;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .campus-hero-bg {
+    background-image: linear-gradient(to bottom, rgba(248, 250, 252, 0.48), rgba(248, 250, 252, 0.98)),
+      url('/ctu-campus-bg.jpg');
+    background-position: 100% 150%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.7s ease-out both;
+  }
+}

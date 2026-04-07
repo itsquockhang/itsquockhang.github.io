@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" rx="24" fill="#F1F8FF"/>
+  <text x="56" y="86" fill="#1f5ca9" font-family="Arial, sans-serif" font-size="34" font-weight="700">Paper Pipeline 01</text>
+  <rect x="56" y="140" width="220" height="90" rx="14" fill="#1f5ca9" opacity="0.85"/>
+  <rect x="332" y="140" width="220" height="90" rx="14" fill="#00afef" opacity="0.85"/>
+  <rect x="608" y="140" width="220" height="90" rx="14" fill="#1f5ca9" opacity="0.85"/>
+  <rect x="884" y="140" width="260" height="90" rx="14" fill="#00afef" opacity="0.85"/>
+  <g stroke="#1f5ca9" stroke-width="8" stroke-linecap="round">
+    <line x1="278" y1="184" x2="322" y2="184"/>
+    <line x1="554" y1="184" x2="598" y2="184"/>
+    <line x1="830" y1="184" x2="874" y2="184"/>
+  </g>
+  <text x="94" y="196" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="700">Data</text>
+  <text x="364" y="196" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="700">Model</text>
+  <text x="636" y="196" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="700">Eval</text>
+  <text x="918" y="196" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="700">Analysis</text>
+  <text x="56" y="560" fill="#35639F" font-family="Arial, sans-serif" font-size="24">Replace this placeholder with your real paper pipeline image anytime.</text>
+</svg>
