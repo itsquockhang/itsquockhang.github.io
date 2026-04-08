@@ -1,5 +1,5 @@
 import { CalendarDays, Clock3, Hash, Newspaper } from 'lucide-react'
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useMemo, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import rehypeKatex from 'rehype-katex'
 import remarkGfm from 'remark-gfm'
@@ -11,10 +11,34 @@ const BagOfWordsPlot = lazy(() => import('../components/BagOfWordsPlot'))
 const ImageProcessingPlot = lazy(() => import('../components/ImageProcessingPlot'))
 
 function BlogPage() {
+  const [activeTag, setActiveTag] = useState('All')
   const params = useParams()
-  const currentPost = getBlogPostBySlug(params.slug) ?? blogPosts[0]
+  const sortedPosts = useMemo(
+    () =>
+      [...blogPosts].sort((a, b) => {
+        const timeA = new Date(a.date).getTime()
+        const timeB = new Date(b.date).getTime()
+        return timeB - timeA
+      }),
+    []
+  )
 
-  if (params.slug && !getBlogPostBySlug(params.slug)) {
+  const availableTags = useMemo(
+    () => ['All', ...new Set(sortedPosts.flatMap((post) => post.tags))],
+    [sortedPosts]
+  )
+
+  const filteredPosts = useMemo(() => {
+    if (activeTag === 'All') {
+      return sortedPosts
+    }
+    return sortedPosts.filter((post) => post.tags.includes(activeTag))
+  }, [activeTag, sortedPosts])
+
+  const postFromSlug = params.slug ? getBlogPostBySlug(params.slug) : null
+  const currentPost = postFromSlug ?? filteredPosts[0] ?? sortedPosts[0]
+
+  if (params.slug && !postFromSlug) {
     return <Navigate to="/blog" replace />
   }
 
@@ -41,10 +65,29 @@ function BlogPage() {
               Posts
             </p>
             <p className="mt-2 text-sm text-slate-600">Posts, notes, and ideas I want to share.</p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {availableTags.map((tag) => {
+                const isActive = tag === activeTag
+                return (
+                  <button
+                    key={tag}
+                    type="button"
+                    onClick={() => setActiveTag(tag)}
+                    className={
+                      isActive
+                        ? 'rounded-full bg-brand-primary px-3 py-1 text-xs font-semibold text-white'
+                        : 'rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700 transition hover:bg-slate-200'
+                    }
+                  >
+                    {tag}
+                  </button>
+                )
+              })}
+            </div>
           </div>
 
           <div className="space-y-3">
-            {blogPosts.map((post) => {
+            {filteredPosts.map((post) => {
               const isActive = post.slug === currentPost.slug
               return (
                 <Link
@@ -71,6 +114,11 @@ function BlogPage() {
                 </Link>
               )
             })}
+            {filteredPosts.length === 0 ? (
+              <p className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-4 text-sm text-slate-600">
+                No posts found for tag: {activeTag}
+              </p>
+            ) : null}
           </div>
         </aside>
 

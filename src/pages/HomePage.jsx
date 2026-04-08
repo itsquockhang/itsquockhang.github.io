@@ -71,6 +71,12 @@ function HomePage() {
               </div>
               <p className="mt-2 font-medium text-slate-800">{item.degree}</p>
               <p className="text-sm text-slate-600">{item.year}</p>
+              {item.thesisTitle ? (
+                <p className="mt-2 text-sm leading-relaxed text-slate-700">
+                  <span className="font-semibold text-slate-800">Thesis: </span>
+                  {item.thesisTitle}
+                </p>
+              ) : null}
             </article>
           ))}
         </div>

@@ -12,18 +12,45 @@ export const profile = {
       school: 'Can Tho University',
       degree: 'Master in Computer Science',
       year: '2023 - 2025',
+      thesisTitle:
+        'Multi-label Classification of Chest X-ray Images Using Modern Deep Learning Models',
       logoUrl: 'https://www.ctu.edu.vn/images/branding/logo/CTU_logo.png',
     },
     {
       school: 'Can Tho University',
       degree: 'Bachelor of Engineering in Computer Science',
       year: '2019 - 2023',
+      thesisTitle:
+        'Using Deep Learning to Build a Chatbot Supporting the Promotion of Speciality Dishes in Mekong Delta',
       logoUrl: 'https://www.ctu.edu.vn/images/branding/logo/CTU_logo.png',
     },
   ],
 }
 
 export const publications = [
+  {
+    id: 'arxiv-2026-viclip-ot',
+    authors: 'Tran, Quoc-Khang; Nguyen, Minh-Thien; Pham, Nguyen-Khang',
+    title:
+      'ViCLIP-OT: The First Foundation Vision-Language Model for Vietnamese Image-Text Retrieval with Optimal Transport',
+    citation: 'arXiv preprint arXiv:2602.22678, 2026.',
+    source: 'arXiv',
+    year: '2026',
+    venue: 'arXiv: 2602.22678',
+    url: 'https://arxiv.org/abs/2602.22678',
+    cover: '/viclipot.png',
+    tags: ['Preprint', '2026', 'arXiv', 'cs.CV'],
+  },
+  {
+    id: 'isds-2024-sboc',
+    authors: 'Tran, Quoc-Khang; Pham, Nguyen-Khang',
+    title: 'SBoC: A Segment-Based Bag of Clusters Approach for Document Clustering',
+    citation: 'In Intelligent Systems and Data Science, pp. 265-279, 2024.',
+    source: '<Intelligent Systems and Data Science>',
+    year: '2024',
+    venue: 'DOI: 10.1007/978-981-97-9613-7_20',
+    tags: ['Published', '2024', 'Book Chapter', 'Springer', 'Scopus'],
+  },
   {
     id: 'sncs-2025-doc-clustering',
     authors: 'Tran, Quoc-Khang; Pham, Nguyen-Khang',
@@ -60,4 +87,25 @@ export const publications = [
   },
 ]
 
-export const courses = []
+export const courses = [
+  {
+    title: 'CT282 - Deep Learning',
+    sortYear: 2026,
+    tags: ['Deep Learning', 'Lab Session', '2025-2026'],
+    description: 'Teaching Assistant, academic year 2025-2026.',
+  },
+  {
+    title: 'CT294 - Applied Machine Learning',
+    sortYear: 2026,
+    tags: ['Machine Learning', 'Lab Session', 'Work-study', '2025-2026'],
+    description:
+      'Teaching Assistant, academic year 2025-2026, work-study program.',
+  },
+  {
+    title: 'CT175 - Graph Theory',
+    sortYear: 2025,
+    tags: ['Graph Theory', 'Lab Session', '2024-2025'],
+    description:
+      'Teaching Assistant, academic year 2024-2025.',
+  }
+]
