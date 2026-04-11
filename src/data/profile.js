@@ -5,7 +5,7 @@ export const profile = {
     'College of Information and Communication Technology - Can Tho University',
   faculty: 'Faculty of Computer Science',
   email: 'tqkhang@ctu.edu.vn',
-  address: '3/2 Street, Ninh Kieu Ward, Can Tho City, Vietnam',
+  address: '3/2 street, Ninh Kieu ward, Can Tho city, Vietnam',
   logoUrl: 'https://www.ctu.edu.vn/images/branding/logo/CTU_logo.png',
   education: [
     {
@@ -14,6 +14,9 @@ export const profile = {
       year: '2023 - 2025',
       thesisTitle:
         'Multi-label Classification of Chest X-ray Images Using Modern Deep Learning Models',
+      supervisor: 'Assoc. Prof. Dr. Nguyen-Khang Pham',
+      grade: '9.0/10',
+      ranking: '1st in class',
       logoUrl: 'https://www.ctu.edu.vn/images/branding/logo/CTU_logo.png',
     },
     {
@@ -22,6 +25,9 @@ export const profile = {
       year: '2019 - 2023',
       thesisTitle:
         'Using Deep Learning to Build a Chatbot Supporting the Promotion of Speciality Dishes in Mekong Delta',
+      supervisor: 'Assoc. Prof. Dr. Nguyen-Khang Pham',
+      grade: '9.7/10',
+      ranking: '1st in class',
       logoUrl: 'https://www.ctu.edu.vn/images/branding/logo/CTU_logo.png',
     },
   ],
@@ -52,6 +58,17 @@ export const publications = [
     tags: ['Published', '2024', 'Book Chapter', 'Springer', 'Scopus'],
   },
   {
+    id: 'isds-2023-chatbot',
+    authors: 'Tran, Quoc-Khang; Pham, Nguyen-Khang',
+    title:
+      'Using Deep Learning to Build a Chatbot Supporting the Promotion of Speciality Dishes in Mekong Delta',
+    citation: 'In Intelligent Systems and Data Science, pp. 194-203, 2023.',
+    source: '<Intelligent Systems and Data Science>',
+    year: '2023',
+    venue: 'DOI: 10.1007/978-981-99-7666-9_16',
+    tags: ['Published', '2023', 'Book Chapter', 'Springer', 'Scopus'],
+  },
+  {
     id: 'sncs-2025-doc-clustering',
     authors: 'Tran, Quoc-Khang; Pham, Nguyen-Khang',
     title:
@@ -61,6 +78,17 @@ export const publications = [
     year: '2025',
     venue: 'DOI: 10.1007/s42979-025-04411-5',
     tags: ['Published', '2025', 'Journal', 'Springer', 'Scopus'],
+  },
+  {
+    id: 'isds-2025-mscxr',
+    authors: 'Tran, Quoc-Khang; Pham, Nguyen-Khang',
+    title:
+      'MS-CXR: Improving Multi-label Chest X-Ray Classification via a Multi-architecture Soft Voting',
+    citation: 'In Intelligent Systems and Data Science, pp. 147-161, 2025.',
+    source: '<Intelligent Systems and Data Science>',
+    year: '2025',
+    venue: 'DOI: 10.1007/978-981-95-3355-8_11',
+    tags: ['Published', '2025', 'Book Chapter', 'Springer', 'Scopus'],
   },
   {
     id: 'miai-2025-cxr-kd',

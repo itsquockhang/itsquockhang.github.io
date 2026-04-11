@@ -10,9 +10,9 @@ function App() {
     <Routes>
       <Route element={<SiteLayout />}>
         <Route path="/" element={<HomePage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:slug" element={<BlogPage />} />
-        <Route path="/courses" element={<CoursesPage />} />
+        {/* <Route path="/blog" element={<BlogPage />} /> */}
+        {/* <Route path="/blog/:slug" element={<BlogPage />} /> */}
+        {/* <Route path="/courses" element={<CoursesPage />} /> */}
         <Route path="/publications" element={<PublicationsPage />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />

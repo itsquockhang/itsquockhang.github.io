@@ -1,7 +1,8 @@
-import { GraduationCap, Mail, MapPin, School } from 'lucide-react'
-import { profile } from '../data/profile'
+import { GraduationCap, Mail, MapPin, School, BookOpen } from 'lucide-react'
+import { profile, publications } from '../data/profile'
 
 function HomePage() {
+  const latestPubs = [...publications].sort((a, b) => b.year - a.year).slice(0, 5)
   return (
     <div className="space-y-6">
       <section className="campus-hero-bg animate-fade-up overflow-hidden rounded-3xl border border-white/70 bg-white/70 shadow-xl shadow-[#1f5ca9]/10 backdrop-blur">
@@ -77,6 +78,59 @@ function HomePage() {
                   {item.thesisTitle}
                 </p>
               ) : null}
+              {item.supervisor ? (
+                <p className="mt-2 text-sm text-slate-600">
+                  <span className="font-semibold text-slate-700">Supervisor: </span>
+                  {item.supervisor}
+                </p>
+              ) : null}
+              {item.grade || item.ranking ? (
+                <div className="mt-3 flex flex-wrap items-center gap-2">
+                  {item.grade ? (
+                    <>
+                      <span className="text-sm font-semibold text-slate-700">Grade:</span>
+                      <span className="inline-block rounded-full bg-[#1f5ca9]/10 px-3 py-1 text-[#1f5ca9] font-semibold text-sm">
+                        {item.grade}
+                      </span>
+                    </>
+                  ) : null}
+                  {item.ranking ? (
+                    <span className="inline-block rounded-full bg-amber-100 px-3 py-1 text-amber-800 font-semibold text-sm">
+                      🏆 {item.ranking}
+                    </span>
+                  ) : null}
+                </div>
+              ) : null}
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="animate-fade-up rounded-2xl border border-slate-200 bg-white p-6 shadow-sm [animation-delay:0.2s]">
+        <div className="flex items-center gap-2">
+          <h2 className="font-display text-2xl font-semibold text-slate-900">Latest Publications</h2>
+        </div>
+        <div className="mt-4 space-y-3">
+          {latestPubs.map((pub) => (
+            <article
+              key={pub.id}
+              className="rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:bg-white hover:shadow-sm"
+            >
+              <p className="text-sm font-medium text-slate-700">{pub.year}</p>
+              <p className="mt-1 text-sm font-semibold text-slate-900 leading-snug">
+                {pub.title}
+              </p>
+              <p className="mt-2 text-xs text-slate-600">{pub.authors}</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {pub.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center rounded-full bg-slate-200 px-2 py-1 text-xs font-medium text-slate-700"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </article>
           ))}
         </div>

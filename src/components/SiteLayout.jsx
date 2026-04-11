@@ -3,8 +3,8 @@ import { profile } from '../data/profile'
 
 const navItems = [
   { to: '/', label: 'Home' },
-  { to: '/blog', label: 'Blog' },
-  { to: '/courses', label: 'Courses' },
+  // { to: '/blog', label: 'Blog' },
+  // { to: '/courses', label: 'Courses' },
   { to: '/publications', label: 'Publications' },
 ]
 
